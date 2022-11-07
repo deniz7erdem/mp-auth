@@ -1,13 +1,16 @@
-import React from 'react'
-import { Provider } from 'react-native-paper'
-import { NavigationContainer } from '@react-navigation/native'
-import { createStackNavigator } from '@react-navigation/stack'
-import { theme } from './src/core/theme'
-import {
-  LoginScreen
-} from './src/screens'
 
-const Stack = createStackNavigator()
+import React from 'react'
+import { Provider } from 'react-native-paper';
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import { theme } from './src/theme';
+import { 
+LoginScreen, 
+ResetPasswordScreen 
+} from './src/screens/'
+
+const Stack = createNativeStackNavigator();
+
 
 export default function App() {
   return (
@@ -20,8 +23,9 @@ export default function App() {
           }}
         >
           <Stack.Screen name="LoginScreen" component={LoginScreen} />
+          <Stack.Screen name="ResetPasswordScreen" component={ResetPasswordScreen} />
         </Stack.Navigator>
       </NavigationContainer>
     </Provider>
-  )
+  );
 }

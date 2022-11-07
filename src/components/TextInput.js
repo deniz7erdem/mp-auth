@@ -1,7 +1,9 @@
-import React from 'react'
-import { View, StyleSheet, Text } from 'react-native'
-import { TextInput as Input } from 'react-native-paper'
-import { theme } from '../core/theme'
+
+import React from 'react';
+import { View, StyleSheet, Text } from 'react-native';
+import { TextInput as Input } from 'react-native-paper';
+import { theme } from '../theme';
+
 
 export default function TextInput({ errorText, description, ...props }) {
   return (
