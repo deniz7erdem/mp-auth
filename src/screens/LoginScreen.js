@@ -2,12 +2,11 @@ import React, { useState } from 'react'
 import { TouchableOpacity, StyleSheet, View,Image } from 'react-native'
 import { Text } from 'react-native-paper'
 import Background from '../components/Background'
-import Logo from '../components/Logo'
 import Header from '../components/Header'
 import Button from '../components/Button'
 import TextInput from '../components/TextInput'
 import BackButton from '../components/BackButton'
-import { theme } from '../core/theme'
+import { theme } from '../theme'
 import { emailValidator } from '../helpers/emailValidator'
 import { passwordValidator } from '../helpers/passwordValidator'
 
@@ -34,7 +33,7 @@ export default function LoginScreen({ navigation }) {
   return (
     <Background>
       <BackButton goBack={navigation.goBack} />
-      <Logo />
+      
       <Header>Tekrar Hoşgeldin</Header>
       <TextInput
         label="Email"
@@ -80,7 +79,7 @@ export default function LoginScreen({ navigation }) {
 
                 <View style={{ flexDirection: 'column', alignItems: 'center', width: '95%' }} >
                     <TouchableOpacity onPress={() => console.log("google ile giriş yapıldı")} style={styles.social_btn} >
-                        <Image style={styles.social_img} source={require('../assets/google_icon.png')} />
+                        <Image style={styles.social_img} source={require('../../assets/google_icon.png')} />
                         <Text style={{ width: '80%', textAlign: 'center', fontSize: 16 }} >Google ile giriş yap</Text>
                     </TouchableOpacity>
                 </View>
