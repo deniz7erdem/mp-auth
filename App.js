@@ -1,11 +1,16 @@
-import { StyleSheet, Text, View } from 'react-native';
+
+import React from 'react'
 import { Provider } from 'react-native-paper';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { theme } from './src/theme';
-import { ResetPasswordScreen } from './src/screens/'
+import { 
+LoginScreen, 
+ResetPasswordScreen 
+} from './src/screens/'
 
 const Stack = createNativeStackNavigator();
+
 
 export default function App() {
   return (
@@ -17,18 +22,10 @@ export default function App() {
             headerShown: false,
           }}
         >
+          <Stack.Screen name="LoginScreen" component={LoginScreen} />
           <Stack.Screen name="ResetPasswordScreen" component={ResetPasswordScreen} />
         </Stack.Navigator>
       </NavigationContainer>
     </Provider>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});

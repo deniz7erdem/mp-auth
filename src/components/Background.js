@@ -1,6 +1,8 @@
 import React from 'react'
 import { ImageBackground, StyleSheet, KeyboardAvoidingView } from 'react-native'
+
 import { theme } from '../theme'
+
 
 export default function Background({ children }) {
   return (
