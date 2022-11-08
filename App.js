@@ -6,7 +6,8 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { theme } from './src/theme';
 import { 
 LoginScreen, 
-ResetPasswordScreen 
+RegisterScreen,
+ResetPasswordScreen
 } from './src/screens/'
 
 const Stack = createNativeStackNavigator();
@@ -23,7 +24,8 @@ export default function App() {
           }}
         >
           <Stack.Screen name="LoginScreen" component={LoginScreen} />
-          <Stack.Screen name="ResetPasswordScreen" component={ResetPasswordScreen} />
+          <Stack.Screen name="RegisterScreen" component={RegisterScreen} />
+          <Stack.Screen name="ResetPasswordScreen" component={ResetPasswordScreen} />    
         </Stack.Navigator>
       </NavigationContainer>
     </Provider>
