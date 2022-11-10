@@ -78,7 +78,7 @@ export default function LoginScreen({ navigation }) {
                 <Text style={{ textAlign: 'center', marginTop: 15,marginBottom:15,fontSize:15, color:theme.colors.primary,fontWeight:'bold'}} >Veya</Text>
 
                 <View style={{ flexDirection: 'column', alignItems: 'center', width: '95%' }} >
-                    <TouchableOpacity onPress={() => console.log("google ile giriş yapıldı")} style={styles.social_btn} >
+                    <TouchableOpacity onPress={() => navigation.navigate('Dashboard')} style={styles.social_btn} >
                         <Image style={styles.social_img} source={require('../../assets/google_icon.png')} />
                         <Text style={{ width: '80%', textAlign: 'center', fontSize: 16 }} >Google ile giriş yap</Text>
                     </TouchableOpacity>

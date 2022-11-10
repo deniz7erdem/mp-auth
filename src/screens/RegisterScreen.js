@@ -30,7 +30,7 @@ export default function RegisterScreen({ navigation }) {
 
   return (
     <Background>
-      <BackButton goBack={navigation.LoginScreen} />
+      <BackButton goBack={navigation.goBack} />
       
       <Header>Merhaba, Hesap Oluştur</Header>
       

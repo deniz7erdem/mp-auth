@@ -26,11 +26,15 @@ export default function ResetPasswordScreen({ navigation }) {
       <TextInput
         label="E-posta adresi"
         returnKeyType="done"
+        value={email.value}
+        onChangeText={(text) => setEmail({ value: text, error: '' })}
+        error={!!email.error}
+        errorText={email.error}
         autoCapitalize="none"
         autoCompleteType="email"
         textContentType="emailAddress"
         keyboardType="email-address"
-        description="Yeni şifreni içern bir e-posta alacaksın."
+        description="Yeni şifreni içeren bir e-posta alacaksın."
       />
       <Button
         mode="contained"
