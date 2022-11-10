@@ -5,6 +5,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { theme } from './src/theme';
 import { 
+StartScreen,
 LoginScreen, 
 RegisterScreen,
 ResetPasswordScreen,
@@ -24,10 +25,13 @@ export default function App() {
             headerShown: false,
           }}
         >
+
+          <Stack.Screen name="StartScreen" component={StartScreen} />
           <Stack.Screen name="LoginScreen" component={LoginScreen} />
           <Stack.Screen name="RegisterScreen" component={RegisterScreen} />
           <Stack.Screen name="Dashboard" component={Dashboard} />
           <Stack.Screen name="ResetPasswordScreen" component={ResetPasswordScreen} />
+        
         </Stack.Navigator>
       </NavigationContainer>
     </Provider>
